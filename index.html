@@ -54,12 +54,34 @@
             color: #334155;
             margin-top: 0.75rem;
         }
+
+        /* --- PRINT STYLES --- */
+        @media print {
+            body {
+                background-color: #fff;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+                border: none;
+            }
+            a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+            .list-item::before {
+                color: #000 !important;
+            }
+             p, h1, h2, h3, h4, li, div {
+                color: #000 !important;
+            }
+        }
     </style>
 </head>
 <body class="text-slate-700">
     <div class="container mx-auto p-4 sm:p-8 bg-white shadow-lg rounded-lg my-8">
         
-        <!-- Header Section -->
         <header class="text-center mb-10 border-b pb-6">
             <h1 class="text-4xl sm:text-5xl font-bold text-slate-800">Md Ahsan Raza</h1>
             <p class="text-xl sm:text-2xl text-blue-600 font-medium mt-2">Senior Frontend Engineer</p>
@@ -78,9 +100,7 @@
 
         <main class="grid grid-cols-1 md:grid-cols-3 gap-10">
             
-            <!-- Left Column -->
             <div class="md:col-span-2">
-                <!-- Professional Summary -->
                 <section>
                     <h2 class="section-title text-lg">Professional Summary</h2>
                     <p class="text-base leading-relaxed">
@@ -88,11 +108,9 @@
                     </p>
                 </section>
 
-                <!-- Work Experience -->
                 <section class="mt-8">
                     <h2 class="section-title text-lg">Work Experience</h2>
                     <div class="space-y-8">
-                        <!-- Job 1 -->
                         <div>
                             <h3 class="job-title text-xl">Senior Member of Technical Staff</h3>
                             <p class="company-name">Techmojo Solutions Pvt. Ltd.</p>
@@ -105,7 +123,7 @@
                                 </ul>
                                 <p class="sub-heading">Performance & Platform:</p>
                                 <ul class="space-y-2">
-                                    <li class="list-item">Engineered a 98% reduction in bundle size (from 1.4MB to 30KB) for a calendar library by creating custom, lightweight UI components.</li>
+                                    <li class="list-item">Engineered a 98% reduction in bundle size (from 1.4MB to 30KB) by creating custom, lightweight UI components.</li>
                                     <li class="list-item">Optimized high-traffic betting apps by implementing lazy loading, code splitting, and web workers, and transitioned apps to PWAs for improved resilience.</li>
                                 </ul>
                                 <p class="sub-heading">Leadership & Cross-Platform:</p>
@@ -115,7 +133,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- Job 2 -->
                         <div>
                             <h3 class="job-title text-xl">Frontend Developer</h3>
                             <p class="company-name">Alectio</p>
@@ -126,7 +143,6 @@
                                 <li class="list-item">Managed and mentored a team of two junior developers, overseeing their tasks and providing technical guidance.</li>
                             </ul>
                         </div>
-                        <!-- Job 3 -->
                         <div>
                             <h3 class="job-title text-xl">Software Engineer I</h3>
                             <p class="company-name">TV2Z</p>
@@ -136,8 +152,7 @@
                                 <li class="list-item">Implemented custom UI components and dynamic dashboards to manage and display large sets of media content.</li>
                             </ul>
                         </div>
-                         <!-- Job 4 -->
-                        <div>
+                         <div>
                             <h3 class="job-title text-xl">Associate Software Engineer</h3>
                             <p class="company-name">DXC Technologies</p>
                             <p class="date-location">Jun 2020 - Jun 2021</p>
@@ -150,9 +165,7 @@
                 </section>
             </div>
 
-            <!-- Right Column -->
             <div class="md:col-span-1">
-                <!-- Skills -->
                 <section>
                     <h2 class="section-title text-lg">Skills</h2>
                     <div class="space-y-4">
@@ -162,7 +175,7 @@
                         </div>
                         <div>
                             <h4 class="font-semibold text-slate-800 mb-1">Frameworks & Libraries</h4>
-                            <p>React, Angular, Zustand, Next.js, RxJS, Jest, React Testing Library, Chart.js</p>
+                            <p>React, Angular, Redux, Next.js, RxJS, Jest, React Testing Library, Chart.js</p>
                         </div>
                         <div>
                             <h4 class="font-semibold text-slate-800 mb-1">Architecture & Performance</h4>
@@ -175,7 +188,6 @@
                     </div>
                 </section>
 
-                <!-- Education -->
                 <section class="mt-8">
                     <h2 class="section-title text-lg">Education</h2>
                     <div>
@@ -185,10 +197,9 @@
                     </div>
                 </section>
                 
-                <!-- Interests -->
                 <section class="mt-8">
                     <h2 class="section-title text-lg">Interests</h2>
-                    <p>Anime & Manga, Music, Playing Drums, Exploring new frontend technologies</p>
+                    <p>Anime & Manga, Open Source Contribution, Exploring new frontend technologies</p>
                 </section>
             </div>
         </main>
